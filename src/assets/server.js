@@ -73,7 +73,7 @@ const directoryPath = path.join(__dirname, testFolder);
 
 //Exercici 4
 app.post("/ex4", (req, res) => {
-  const readableStream = fs.createReadStream(image2Path, { highWaterMark: 16384 });
+  const readableStream = fs.createReadStream(image2Path, { highWaterMark: 8192 });
   console.log(path.basename(image2Path));
 
   readableStream.on('error', (err) => {
